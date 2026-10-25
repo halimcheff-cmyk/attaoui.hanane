@@ -1,0 +1,6 @@
+{
+  "name": "محامي.AI - الأستاذة حنان العطاوي",
+  "description": "نظام قانوني ذكي ومفتوح للتحرير المباشر للأستاذة حنان العطاوي، محامية بهيئة طنجة. استشارات، مكتبة نصوص، صياغة مقالات وجدول جلسات.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

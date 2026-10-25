@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Tajawal', sans-serif;
+  }
+}
+
+.font-legal {
+  font-family: 'Amiri', serif;
+}
+
+/* Editable content visual cue */
+[contenteditable="true"] {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+  border-radius: 6px;
+}
+
+[contenteditable="true"]:hover {
+  background-color: rgba(245, 158, 11, 0.08) !important;
+  cursor: text;
+}
+
+[contenteditable="true"]:focus {
+  background-color: rgba(245, 158, 11, 0.12) !important;
+  box-shadow: 0 0 0 1.5px rgba(245, 158, 11, 0.6);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Court Print Styles for Legal Briefs */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    overflow: visible !important;
+    height: auto !important;
+  }
+
+  header, aside, .no-print, button, form, .status-bar {
+    display: none !important;
+  }
+
+  main {
+    overflow: visible !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .print-only-container {
+    display: block !important;
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  #legal-draft-content {
+    background: white !important;
+    color: black !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-size: 14pt !important;
+    line-height: 2 !important;
+    padding: 20mm !important;
+  }
+
+  #legal-draft-content * {
+    color: black !important;
+    background: transparent !important;
+    border: none !important;
+  }
+
+  #legal-draft-content mark span {
+    display: none !important;
+  }
+}
+
